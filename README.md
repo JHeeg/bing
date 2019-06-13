@@ -1,2 +1,2 @@
-# bing
+# binggrae
 binggrae_portfolio
