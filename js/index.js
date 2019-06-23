@@ -4,13 +4,9 @@ $(document).on('click', 'a[href="#"]', function(e) {
 });
 
 $(document).ready(function(){
-
     setGnb();
-    setMainVisualUI();
-    setBannerInfinite('div.inner-news');
-    setHistoryUI();
-    setImageSlide('#main-visual-mobile', 1, true, 2500);
-
+    setCurrentPage();
+    
     // skip-top
     setScrollUI();
     $(window).on('scroll', function() {
@@ -106,11 +102,6 @@ function setImageSlide(selector, first, status, speed) {
         isTouched = true;
         startX = e.touches[0].clientX;
         offsetX = $(this).position().left;
-        // $(document).on('touchmove', function(e) {
-        //     delX = e.touches[0].clientX - startX;
-        //     if ((delX > 0 && slideNow === 1) || (delX < 0 && slideNow === numSlide)) delX = delX / 10;
-        //     $(selector).find('ul.main-slide').css({'left': (offsetX + delX) + 'px'});
-        // });
 
         document.addEventListener('touchmove', function(e) {
             if (isTouched === true) {
@@ -166,31 +157,19 @@ function setImageSlide(selector, first, status, speed) {
     }
 }
 
-
-
+// 메인 이미지 슬라이드 (pc)
 function setMainVisualUI() {
-    // 메인 이미지 슬라이드 (pc)
     var numMainSlidePc = $('section#main-visual-pc ul.main-slide li').length;
     var timerIdMainPc = '';
     var timerSpeedMainPc = 3000;
     var fontColor = ['#248dd5', '#ffec48', '#ff5c58', '#cadf47', '#ff5f3c', '#f5d33b'];
-    // 메인 이미지 슬라이드 (mobile)
-    // var numMainSlideM = $('section#main-visual-mobile ul.main-slide li').length;
-    // var timerIdMainM = '';
-    // var timerSpeedMainM = 2000;
 
-    // pc
     $('section#main-visual-pc ul.main-slide > li').each(function(i) {
         $(this).css({'right': (i * 100) + '%'});
         $('section#main-visual-pc div.bg-circle ul li:eq(' + i + ')').css({'left': (i * 100) + '%'});
         $('section#main-visual-pc div.cate-circle ul.cate-bg li:eq(' + i + ')').css({'right': (i * 100) + '%'});
     });
     showSlideMainPc(1);
-    // // mobile
-    // $('section#main-visual-mobile ul.main-slide > li').each(function(i) {
-    //     $(this).css({'left': (i * 100) + '%'});
-    // });
-    // showSlideMainM(1);
 
     function showSlideMainPc(n) {
         clearTimeout(timerIdMainPc);
@@ -215,16 +194,10 @@ function setMainVisualUI() {
         if (n === numMainSlidePc) n = 0;
         timerIdMainPc = setTimeout(function() {showSlideMainPc(n + 1);}, timerSpeedMainPc);
     }
-    // function showSlideMainM(n) {
-    //     clearTimeout(timerIdMainM);
-    //     $('section#main-visual-mobile ul.main-slide').css({'transition': 'left 1s', 'left': -((n - 1) * 100) + '%'});
-    //     if (n === numMainSlideM) n = 0;
-    //     timerIdMainM = setTimeout(function() {showSlideMainM(n + 1);}, timerSpeedMainM);
-    // }
 }
 
+// 히스토리 이미지 슬라이드 (모바일)
 function setHistoryUI() {
-    // 히스토리 이미지 슬라이드 (모바일)
     var numSlideHistoryM = $('#history ul.cont-box.mobile > li.on div.cont-ui ul.image-slide li').length;
     var timerIdHistoryM = '';
     var timerSpeedHistoryM = 2000;
@@ -236,13 +209,10 @@ function setHistoryUI() {
     var isTimerOnHistory = true;
     var windowWidth = $(window).width();
     
-    // 히스토리 이미지 슬라이드 (모바일)
     $('#history ul.cont-box.mobile > li').each(function(i) {
-        //if (windowWidth <= 850) {
-            $(this).find('div.cont-ui ul.image-slide li').each(function(j) {
-                $(this).css({'left': (j * 100) + '%', 'display': 'block'});
-            });
-        //}
+        $(this).find('div.cont-ui ul.image-slide li').each(function(j) {
+            $(this).css({'left': (j * 100) + '%', 'display': 'block'});
+        });
     });
 
     $(window).on('resize', function() {
@@ -266,6 +236,9 @@ function setHistoryUI() {
         //mobile
         $('section#history ul.cont-box.mobile > li').css({'display': 'none'});
         $('section#history ul.cont-box.mobile > li:eq(' + index + ')').css({'display': 'block'});
+        $('section#history ul.bottom-box.mobile > li').css({'display': 'none'});
+        $('section#history ul.bottom-box.mobile > li:eq(' + index + ')').css({'display': 'block'});
+
         //pc
         $('section#history ul.cont-box.pc > li').css({'display': 'none'});
         $('section#history ul.cont-box.pc > li:eq(' + index + ')').css({'display': 'block'});
@@ -440,6 +413,7 @@ function setBannerInfinite(selector) {
     }
 }
 
+
 function setScrollUI() {
     var scrollTop = $(document).scrollTop();
     if (scrollTop > 100) {
@@ -447,4 +421,30 @@ function setScrollUI() {
     } else {
         $('#skip-top').removeClass('on');
     }
+}
+
+// gnb에서 현재페이지 표시
+function setCurrentPage() {
+    var bodyClass = $('body').attr('class');
+    var arrayClass = bodyClass.split(' ');
+    if (arrayClass[0] === 'main') return false;
+
+    // 1depth
+    $('.gnb-pc > ul > .depth1').each(function() {
+        if ($(this).attr('data-menu') === arrayClass[1]) {
+            $(this).addClass('nowpage');
+            //alert(arrayClass[1]);
+        } else {
+            $(this).removeClass('nowpage');
+        }
+    });
+    // 2depth
+    $('.gnb-pc > ul > li.nowpage > ul > li').each(function() {
+        if ($(this).attr('data-menu') === arrayClass[2]) {
+            $(this).addClass('nowpage');
+            //$(this).addClass('on');
+        } else {
+            $(this).removeClass('nowpage');
+        }
+    })
 }

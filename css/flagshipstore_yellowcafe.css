@@ -1,0 +1,125 @@
+
+.mobile {display: none !important;}
+#wrap {overflow: hidden; min-width: 1200px;}
+header {position: relative; width: 100%; height: 130px; background-color: #ffffff; z-index: 10;}
+
+.inner-header {position: relative; width: 1200px; height: 70px; left: 50%; top: 0; transform: translateX(-50%); border-bottom: 1px solid #ddd;}
+.inner-header h1 {position: absolute; width: 128px; height: 32px; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.inner-header h1 a {width: 100%; height: 100%; background: url(../img/main/logo.png) no-repeat center;
+    text-indent: -9999px; display: block;}
+
+.inner-header .tnb-left {position: absolute; top: 50%; transform: translateY(-50%); font-size: 14px;}
+.inner-header .tnb-left a {color: #222;}
+.inner-header .tnb-left a + a:before {position: relative; top: -3px; padding: 0 7px; content: '|'; display: inline-block;
+    font-size: 8px;}
+.inner-header .tnb-right {position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+.inner-header .tnb-right select {padding: 5px 10px; font-size: 12px; border: none;}
+.inner-header .tnb-right select:nth-child(1) {position: relative; width: 120px;}
+.inner-header .tnb-right select:nth-child(2) {width: 60px;}
+
+.gnb-pc {position: relative; width: 1200px; height: 60px; left: 50%; transform: translateX(-50%); z-index: 10;}
+.gnb-pc.on {border-bottom: 1px solid #ddd;}
+.gnb-pc > ul {width: 800px; height: 100%; margin: 0 auto;}
+.gnb-pc .depth1 {float: left; width: 25%; text-align: center;}
+.gnb-pc .depth1 > a {display: block; font: 18px 'Binggrae', 'Noto Sans KR', 'sans-serif'; font-weight: 600; line-height: 60px; color: #000;}
+.gnb-pc .depth1 > a:after {position: relative; width: 0; height: 3px; left: 50%; transform: translateX(-50%); content: ''; background: #ff0000; 
+    transition: width 0.2s; display: block;}
+.gnb-pc .depth1 > a:hover:after {width: 60%;}
+.gnb-pc .depth1 a:hover {color: #ff0000;}
+.depth1.on {display: block;}
+.depth1.on .depth2-box {display: block;}
+.depth1.on > a:after, .depth1.nowpage > a:after {width: 60%;}
+
+.depth1 .depth2-box {position: absolute; display: none;}
+.depth1:nth-child(1) .depth2-box {left: 255px;}
+.depth1:nth-child(2) .depth2-box {left: 460px;}
+.depth1:nth-child(3) .depth2-box {left: 648px;}
+.depth1:nth-child(4) .depth2-box {left: 860px;}
+.depth2-box li {height: 40px; line-height: 40px;}
+.depth2-box li.nowpage a {color: #ff0000;}
+
+.gnb-bg {position: absolute; left: 0; bottom: -300px; width: 100%; height: 300px; background: #ffffff; display: none;}
+.gnb-bg.on {display: block;}
+
+
+/* ================== main ================== */
+#main {width: 100%; overflow: hidden;}
+
+/* #visual */
+#visual div.visual-img {width: 100%; min-height: 570px; background: url(../img/flagshipstore/yellowcafe/img_flagship_visual_02.jpg) no-repeat center / cover;}
+
+nav.location {background-color: #f4f4f4;}
+nav.location > ul {width: 1200px; height: 50px; margin: 0 auto;}
+nav.location > ul > li {float: left; height: 100%; line-height: 50px; font-size: 14px;}
+nav.location > ul > li + li {padding-right: 20px;}
+nav.location > ul > li + li:before {content: '|'; display: inline-block; margin-right: 20px;}
+nav.location ul li.btn-home {background: url(../img/flagshipstore/yellowcafe/location_home.png) no-repeat center left / 16px;}
+nav.location ul li.btn-home a {width: 35px; height: 35px; display: block; text-indent: -9999px;}
+nav.location ul li.down-depth {background: url(../img/flagshipstore/yellowcafe/ico_arr_on.png) no-repeat center right;}
+nav.location ul li.down-depth > a {font-weight: 600; color: #ff0000;}
+nav.location ul li.down-depth ul.depth2-box {position: absolute; min-width: 150px; display: none;}
+nav.location ul li.down-depth:hover ul.depth2-box {display: block;}
+nav.location ul li.down-depth ul.depth2-box li {display: block; padding-left: 20px; border: 1px solid #ddd; font-size: 14px;}
+nav.location ul li.down-depth ul.depth2-box li:hover {background-color: #f4f4f4;}
+nav.location ul li.down-depth ul.depth2-box li + li {margin-top: -1px;}
+nav.location ul li.down-depth ul.depth2-box li a {display: block; color: #222222;}
+nav.location ul li.down-depth ul.depth2-box li a:hover {color: #ff0000; text-decoration: underline;}
+
+/* #content_wrap common */
+#cont-wrap {width: 100%}
+#cont-wrap div {box-sizing: border-box;}
+div.inner-cont-wrap {width: 1200px; margin: 0 auto; padding: 70px 0;}
+div.cont-box div.cont-title-box {text-align: center;}
+div.cont-box h2.cont-title {font-family: 'Binggrae-Bold'; font-size: 38px; color: #000; letter-spacing: -2px;}
+div.cont-box p.cont-txt {margin: 20px 0 50px; font-size: 20px; letter-spacing: -1px;}
+div.cont-box div.inner-cont-box h3 {font-family: 'Noto Sans KR'; font-weight: 500; font-size: 24px; letter-spacing: -1px; color: #222;}
+
+/* #content_wrap .about */
+div.about {background: transparent;}
+div.about div.intro div.img {width: 48%; display: inline-block; vertical-align: middle;}
+div.about div.intro div.img img {width: 100%;}
+div.about div.inner-intro {overflow: hidden; color: #222;}
+div.about div.inner-intro div.inner-cont-box {width: 51%; padding: 0 35px; font-size: 18px; display: inline-block; vertical-align: middle;}
+div.about div.inner-intro div.inner-cont-box span {display: block; margin: 30px 0 20px; font-weight: 500;}
+div.about div.inner-intro:nth-child(2) {margin-top: 50px;}
+
+/* #content_wrap .item */
+div.item {background-color: #f4f4f4;}
+div.item div.img {width: 100%; }
+div.item div.img img {width: 30.99%; display: inline-block;}
+div.item div.img img + img {margin-left: 30px;}
+div.item div.art div.img img {width: 47.88%;}
+div.cont-title-box + div.cont-title-box {margin-top: 70px;}
+
+/* #content_wrap .contact */
+div.contact div.store-location {border: 1px solid #eee; margin-top: 50px;}
+div.contact div.store-location div.inner-cont-box {width: 50.7888%;padding: 0 35px; display: inline-block; vertical-align: middle;}
+div.contact div.store-location div.img {width: calc(49% - 1px); display: inline-block; vertical-align: middle;}
+div.contact div.store-location div.img img {width: 100%;}
+
+div.store-location div.inner-cont-box {position: relative;}
+div.store-location h3 {display: inline-block;}
+div.store-location a.btn-map {float: right; padding: 5px 30px 5px 15px; background: url(../img/flagshipstore/yellowcafe/bg_arrow_small01.gif) no-repeat center right 15px; border: 1px solid #7a7a7a; color: #222;}
+div.store-location a.btn-map::after {content: ''; clear: both; display: inline-block;}
+
+div.store-location table {margin-top: 30px; line-height: 30px; color: #222;}
+div.store-location table th {text-align: left; font-weight: 500;}
+div.store-location table tr:nth-child(1) th {vertical-align: top;}
+
+/* footer */
+footer {width: 100%; margin-top: 20px; background-color: #f6f6f6;}
+.footer-wrap {position: relative; width: 1200px; height: 300px; margin: 0 auto;}
+.footer-wrap h1 {position: absolute; width: 100%; height: 80px; bottom: 0; left: 0; background: url(../img/main/footer_logo.png) no-repeat center left / 140px; border-top: 1px solid #d7d7d7; text-indent: -9999px;}
+.footer-wrap ul {margin: 30px 0 15px; display: inline-block;}
+.footer-wrap ul li {position: relative; float: left; padding-right: 20px; line-height: 1.5;}
+.footer-wrap ul li:hover {font-weight: 600;}
+.footer-wrap ul li + li {padding-left: 20px;}
+.footer-wrap ul li + li:before {position: absolute; width: 1px; height: 10px; left: 0; top: 36%; display: block; content: ''; background-color: #7a7a7a;}
+.footer-wrap ul li a {color: #222;}
+
+.footer-wrap .cs {clear: both; margin: 20px 0 10px; font-size: 16px; line-height: 2;}
+.footer-wrap .cs span {display: inline-block; margin-left: 10px; padding: 2px 10px; background-color: #fff; border: 1px solid #7a7a7a; font-size: 14px;}
+.footer-wrap .cs span:after {margin-left: 5px; content: '\f054'; font-family: 'Font Awesome 5 Free'; font-weight: 600; font-size: 12px;}
+
+.family-site {position: absolute; right: 0; top: 30px; width: 250px;padding: 10px 20px; font-size: 16px; background-color: #fff; background-position: 95% 50%;}
+.footer-wrap .copyright {position: absolute; bottom: 30px; left: 200px; font-size: 16px; font-weight: 600; display: inline-block;}
