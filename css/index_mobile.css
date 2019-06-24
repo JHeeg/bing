@@ -75,7 +75,7 @@ header.on-m {background-color: #ff0000; position: relative;}
 .sns ul li:nth-child(4) a {background-image: url(../img/main/ico_kisa.png);}
 
 /* 모바일 메뉴 - modal */
-.gnb-modal.on-m {position: fixed; width: 100vw; height: 100%; margin: -40px 0 0 0; background-color: rgba(0, 0, 0, 0.5); z-index: 2;}
+.gnb-modal.on-m {position: fixed; width: 100vw; height: 100%; margin: -40px 0 0 0; background-color: rgba(0, 0, 0, 0.5); z-index: 2;2}
 
 /* ============== main ============== */
 /* mainVisual */
