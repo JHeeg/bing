@@ -1,4 +1,4 @@
-# binggrae
+# 포트폴리오 - 빙그레
 binggrae_portfolio
 
 해당 작업물은 취업을 위한 개인 포트폴리오입니다.
