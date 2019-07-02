@@ -5,13 +5,11 @@ header {position: relative; width: 100%; height: 130px; background-color: #fffff
 
 .inner-header {position: relative; width: 1200px; height: 70px; left: 50%; top: 0; transform: translateX(-50%); border-bottom: 1px solid #ddd;}
 .inner-header h1 {position: absolute; width: 128px; height: 32px; left: 50%; top: 50%; transform: translate(-50%, -50%);}
-.inner-header h1 a {width: 100%; height: 100%; background: url(../img/main/logo.png) no-repeat center;
-    text-indent: -9999px; display: block;}
+.inner-header h1 a {width: 100%; height: 100%; background: url(../img/main/logo.png) no-repeat center; text-indent: -9999px; display: block;}
 
 .inner-header .tnb-left {position: absolute; top: 50%; transform: translateY(-50%); font-size: 14px;}
 .inner-header .tnb-left a {color: #222;}
-.inner-header .tnb-left a + a:before {position: relative; top: -3px; padding: 0 7px; content: '|'; display: inline-block;
-    font-size: 8px;}
+.inner-header .tnb-left a + a:before {position: relative; top: -3px; padding: 0 7px; content: '|'; display: inline-block; font-size: 8px;}
 .inner-header .tnb-right {position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
 .inner-header .tnb-right select {padding: 5px 10px; font-size: 12px; border: none;}
 .inner-header .tnb-right select#language {padding-right: 30px;}
@@ -21,8 +19,7 @@ header {position: relative; width: 100%; height: 130px; background-color: #fffff
 .gnb-pc > ul {width: 800px; height: 100%; margin: 0 auto;}
 .gnb-pc .depth1 {float: left; width: 25%; text-align: center;}
 .gnb-pc .depth1 > a {display: block; font: 18px 'Binggrae', 'Noto Sans KR', 'sans-serif'; font-weight: 600; line-height: 60px; color: #000;}
-.gnb-pc .depth1 > a:after {position: relative; width: 0; height: 3px; left: 50%; transform: translateX(-50%); content: ''; background: #ff0000; 
-    transition: width 0.2s; display: block;}
+.gnb-pc .depth1 > a:after {position: relative; width: 0; height: 3px; left: 50%; transform: translateX(-50%); content: ''; background: #ff0000; transition: width 0.2s; display: block;}
 .gnb-pc .depth1 > a:hover:after {width: 60%;}
 .gnb-pc .depth1 a:hover {color: #ff0000;}
 .depth1.on {display: block;}
@@ -41,7 +38,7 @@ header {position: relative; width: 100%; height: 130px; background-color: #fffff
 .gnb-bg.on {display: block;}
 
 
-/* ================== main ================== */
+/*  main  */
 #main {width: 100%; overflow: hidden;}
 
 /* #visual */

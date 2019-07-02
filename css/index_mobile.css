@@ -10,16 +10,16 @@
 #wrap {overflow: hidden; min-width: 375px;}
 .pc {display: none !important;}
 
-/* ============== header ============== */
+/* header */
 header {position: relative; height: 40px; border-bottom: 1px solid #ffffff; z-index: 10;}
 header.on-m {background-color: #ff0000; position: relative;}
 
-/* 로고 */
+/* logo */
 .logo {position: absolute; width: 71px; left: 4%; top: 50%; transform: translateY(-50%); background: url(../img/main/logo.png) no-repeat center / contain; text-indent: -9999px;}
 .logo.on-m {background-image: url(../img/main/logo_m_w.png);}
 .logo a {display: block; width: 100%;}
 
-/* 모바일 메뉴 공통 */
+/* mobile menu common */
 .btn-menu {position: absolute; width: 17px; height: 10px; right: 7%; top: 50%; transform: translateY(-50%);}
 .btn-menu .menubar {display: block; width: 100%; height: 1px; margin-bottom: 5px; background-color: #000;}
 .btn-menu.on-m .menubar {background-color: #ffffff;}
@@ -32,23 +32,22 @@ header.on-m {background-color: #ff0000; position: relative;}
 .depth1.on .depth2-box,
 .depth2.on .depth3-box {width: 100%; display: block;}
 
-/* 모바일 메뉴 - depth1 */
+/* mobile menu - depth1 */
 .depth1 {width: 100%; line-height: 50px;}
-.depth1 > a {width: 100%; height: 50px; border-bottom: 1px solid #ddd; 
-    background: url(../img/main/down-arrow.png) no-repeat center right 7.5vw / 2vw; display: block; font-family: 'Binggrae'; color: #222;}
+.depth1 > a {width: 100%; height: 50px; border-bottom: 1px solid #ddd; background: url(../img/main/down-arrow.png) no-repeat center right 7.5vw / 2vw; display: block; font-family: 'Binggrae'; color: #222;}
 
-/* 모바일 메뉴 - depth2 */
+/* mobile menu - depth2 */
 .depth2-box {display: none; font-size: 14px;}
 .depth2-box > .depth2 {width: 100%; height: 100%; line-height: 50px;}
 .depth2-box > .depth2 > a {width: 100%; height: 50px; padding-left: 5%; display: block;}
 .depth2-box > .depth2.depth-open > a {background: url(../img/main/ico_plus.png) no-repeat center right 7.5vw / 1.5vw;}
 .depth2-box > .depth2.depth-open.on > a {background-image: url(../img/main/ico_minus.png); color: #ff0000;}
 
-/* 모바일 메뉴 - depth3 */
+/* mobile menu - depth3 */
 .depth3-box {background-color: #ebebeb; overflow: hidden; display: none;}
 .depth3-box > li {float: left; width: 50%; padding-left: 7%;}
 
-/* 모바일 메뉴 - etc1, etc2 */
+/* mobile menu - etc1, etc2 */
 .etc1 ul li {float: left; width: 50%; height: 50px; padding-left: 11%; line-height: 50px; background-repeat: no-repeat; background-position: center left 13%; font-size: 14px;}
 .etc1 ul li:nth-child(1) {background-image: url(../img/main/ico_link_customer.png); background-size: 2vw; border-right: 1px solid #dddddd; border-bottom: 1px solid #dddddd;}
 .etc1 ul li:nth-child(2) {background-image: url(../img/main/ico_link_road.png); background-size: 2vw; border-bottom: 1px solid #dddddd;}
@@ -74,10 +73,10 @@ header.on-m {background-color: #ff0000; position: relative;}
 .sns ul li:nth-child(3) a {background-image: url(../img/main/ico_youtube.png);}
 .sns ul li:nth-child(4) a {background-image: url(../img/main/ico_kisa.png);}
 
-/* 모바일 메뉴 - modal */
-.gnb-modal.on-m {position: fixed; width: 100vw; height: 100%; margin: -40px 0 0 0; background-color: rgba(0, 0, 0, 0.5); z-index: 2;2}
+/* mobile menu - modal */
+.gnb-modal.on-m {position: fixed; width: 100vw; height: 100%; margin: -40px 0 0 0; background-color: rgba(0, 0, 0, 0.5); z-index: 2;}
 
-/* ============== main ============== */
+/*  main  */
 /* mainVisual */
 #main-visual-mobile {position: relative; /* height: 70vh; */ overflow: hidden; padding: 0;}
 #main-visual-mobile ul.main-slide {position: relative; width: 100%; height: 700px; left: 0; top: 0;}
@@ -200,7 +199,7 @@ section .cont-txt {font-size: 14px; color: #444;}
 #news ul.image-slide-news .cont-title {font-size: 16px; font-weight: 900;}
 #news ul.image-slide-news .cont-txt {font-size: 14px;}
 
-div.image-slide-box {/* position: relative; width: 100%; top: 45%; left: 50%; transform: translate(-50%, -50%);  */overflow: hidden; padding: 50px 0;}
+div.image-slide-box {overflow: hidden; padding: 50px 0;}
 ul.image-slide-news {position: relative; width: 100000px;}
 ul.image-slide-news li {position: relative; width: 320px; height: 500px; overflow: hidden; float: left; transition: transform 1s; margin-right: 50px; background-color: #fff;}
 ul.image-slide-news li.on {transform: scale(1.1);}
@@ -210,13 +209,11 @@ ul.image-slide-news li div.cont-box {width: 100%; padding: 30px 0;}
 ul.image-slide-news li a {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
 ul.image-slide-news li a img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); height: 100%;}
 
-
-
 /* beyond-sns */
-.wrap-sns {width: 100%; /* height: 100%;  */text-align: center;}
+.wrap-sns {width: 100%; text-align: center;}
 .wrap-sns .img-box {position: relative; width: 90vw; height: 90vw; left: 50%; transform: translate(-50%, 0); margin: 20px 0 40px;}
 
-#beyond-sns .cont-img {/* width: 90vw; height: 90vw;   */overflow: hidden;}
+#beyond-sns .cont-img {overflow: hidden;}
 #beyond-sns .cont-img li {position: absolute; width: calc(50% - 10px); height: calc(50% - 10px);}
 #beyond-sns .cont-img li:nth-child(1) {left: 0; top: 0;}
 #beyond-sns .cont-img li:nth-child(2) {right: 0; top: 0;}
@@ -235,12 +232,10 @@ ul.image-slide-news li a img {position: absolute; left: 50%; top: 50%; transform
 /* footer */
 footer {background-color: #f6f6f6;}
 .footer-wrap {width: 100%; text-align: center;}
-.footer-wrap h1 {width: 100%; height: 12vw; background: url(../img/main/footer_logo.png) no-repeat center left 20px / 20vw; 
-    border-bottom: 1px solid #d7d7d7; text-indent: -9999px;}
+.footer-wrap h1 {width: 100%; height: 12vw; background: url(../img/main/footer_logo.png) no-repeat center left 20px / 20vw; border-bottom: 1px solid #d7d7d7; text-indent: -9999px;}
 .footer-wrap ul {height: 5vw; margin: 2vw 0; display: inline-block;}
 .footer-wrap ul li {position: relative; float: left; padding: 0 2vw; line-height: 1.5;}
-.footer-wrap ul li + li:before {position: absolute; width: 1px; height: 10px; left: 0; top: 50%; 
-    transform: translateY(-50%); display: block; content: ''; background-color: #7a7a7a;}
+.footer-wrap ul li + li:before {position: absolute; width: 1px; height: 10px; left: 0; top: 50%; transform: translateY(-50%); display: block; content: ''; background-color: #7a7a7a;}
 .footer-wrap ul li a {color: #222;}
 
 .footer-wrap .cs {clear: both; font-size: 14px; line-height: 1.5;}
