@@ -5,6 +5,6 @@
 사용된 이미지는 빙그레 사이트에 쓰인 이미지를 사용했습니다.
 
 <작업 페이지> - 기여도 퍼블리싱 100%
-1. 메인페이지 (index.html)
-2. 플래그쉽스토어 - 소프트랩 (/page/flagshipstore_softlab.html)
-3. 플래그쉽스토어 - 옐로우카페 (/page/flagshipstore_yellowcafe.html)
+1. 메인페이지 (https://jheeg.github.io/binggrae/)
+2. 플래그쉽스토어 - 소프트랩 (https://jheeg.github.io/binggrae/page/flagshipstore_softlab.html)
+3. 플래그쉽스토어 - 옐로우카페 (https://jheeg.github.io/binggrae/page/flagshipstore_yellowcafe.html)
