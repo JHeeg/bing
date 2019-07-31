@@ -1,3 +1,4 @@
+@charset "utf-8";
 
 .mobile {display: none !important;}
 #wrap {overflow: hidden; min-width: 1200px;}

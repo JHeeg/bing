@@ -1,7 +1,8 @@
+@charset "utf-8";
 
+/* common */
 .mobile {display: none !important;}
 #wrap {overflow: hidden; min-width: 1200px;}
-
 section {position: relative; overflow: hidden; box-sizing: border-box;}
 
 /* header */
@@ -12,8 +13,7 @@ header {position: relative; width: 100%; height: 130px; background-color: #fffff
 
 .inner-header .tnb-left {position: absolute; top: 50%; transform: translateY(-50%); font-size: 14px;}
 .inner-header .tnb-left a {color: #222;}
-.inner-header .tnb-left a + a:before {position: relative; top: -3px; padding: 0 7px; content: '|'; display: inline-block;
-    font-size: 8px;}
+.inner-header .tnb-left a + a:before {position: relative; top: -3px; padding: 0 7px; content: '|'; display: inline-block; font-size: 8px;}
 .inner-header .tnb-right {position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
 .inner-header .tnb-right select {padding: 5px 10px; font-size: 12px; border: none;}
 .inner-header .tnb-right select#language {padding-right: 30px;}
@@ -26,6 +26,7 @@ header {position: relative; width: 100%; height: 130px; background-color: #fffff
 .gnb-pc .depth1 > a:after {position: relative; width: 0; height: 3px; left: 50%; transform: translateX(-50%); content: ''; background: #ff0000; transition: width 0.2s; display: block;}
 .gnb-pc .depth1 > a:hover:after {width: 60%;}
 .gnb-pc .depth1 a:hover {color: #ff0000;}
+
 .depth1.on {display: block;}
 .depth1.on .depth2-box {display: block;}
 .depth1.on > a:after, .depth1.nowpage > a:after {width: 60%;}
@@ -47,7 +48,7 @@ header {position: relative; width: 100%; height: 130px; background-color: #fffff
 #main-visual-pc .main-slide {position: absolute; width: 100%; height: 100%;}
 #main-visual-pc .main-slide li {position: absolute; width: 100%; min-width: 1200px; height: 100%;}
 
-/* main-slide 공통 */
+/* main-slide common */
 #main-visual-pc .main-slide .slide-cont {position: absolute; width: 500px; margin-left: 15%; left: 0; top: 50%; transform: translateY(-50%);}
 #main-visual-pc .main-slide .slide-index {position: absolute; width: 55%; left: -60%; top: 50%;}
 #main-visual-pc .main-slide .slide-index em {text-align: right; font-weight: 600; display: block;}
@@ -104,7 +105,7 @@ header {position: relative; width: 100%; height: 130px; background-color: #fffff
 #main-visual-pc .bg-circle ul li:nth-child(6) {background-color: #f5d33b;}
 
 /* main-slide bg, category 동그라미 bg */
-#main-visual-pc div.cate-circle ul.cate-bg {position: absolute; width: 100%; height: 100%;  text-indent: -9999px;}
+#main-visual-pc div.cate-circle ul.cate-bg {position: absolute; width: 100%; height: 100%; text-indent: -9999px;}
 #main-visual-pc .cate-bg li {position: absolute; width: 100%; height: 100%; border-radius: 50%; overflow: hidden;}
 #main-visual-pc .main-slide .main-slide01,
 #main-visual-pc .cate-bg li:nth-child(1) {background-color: #ffec48;}
